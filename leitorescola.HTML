@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+       <body>
+        <h1> resultados dos alunos</h1>
+        <div id="situacao">
+
+        </div>
+        <script>
+        let professor = prompt("Digite o nome do professor"); 
+        let aluno = prompt("Digite o nome do aluno");      
+        let nota1 = Number(prompt("Digite a nota 1 "));      
+        let nota2 = Number(prompt("Digite a nota 2"));
+        let nota3 = Number(prompt("Digite a nota 3"));
+        let media = (nota1 + nota2 + nota3)/3;
+        let situacao;
+        
+        if(media <4){
+            situacao = "Retido";
+        } else if (media <7){
+            situacao = "Recuperação";
+        
+        }else if (media <11){
+            situacao = "aprovado";
+
+        }else{
+            situacao = "Esta ,édia é invalida";
+        }
+        document.getElementById("situacao").innerHTML = "Professor: " + professor + "</br>" + "Aluno: " + aluno +
+
+"</br>" + "Média: " + media + "</br>" + "Situação Final: " + situacao;
+
+ 
+
+
+            </script>
+        </body>
+</html>
